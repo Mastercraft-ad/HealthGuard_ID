@@ -1,0 +1,10 @@
+-- Add missing columns for insurance provider and hospital roles
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS country text;
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS state text;
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS location text;
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS hospital_profile text;
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS provider_name text;
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS provider_description text;
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS monthly_fee decimal(10,2);
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS coverage_limit decimal(12,2);
+ALTER TABLE kyc ADD COLUMN IF NOT EXISTS coverage_types text[];

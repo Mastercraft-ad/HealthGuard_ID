@@ -4,7 +4,7 @@ class PinataService {
         this.gatewayUrl = "https://gateway.pinata.cloud/ipfs/";
         this.apiKey = process.env.PINATA_API_KEY || "";
         this.apiSecret = process.env.PINATA_API_SECRET || "";
-        this.jwt = process.env.PINATA_JWT || "";
+        this.jwt = process.env.PINATA_JWT || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJoZWFsdGhndWFyZCIsIm5hbWUiOiJoZWFsdGhndWFyZCIsImVtYWlsIjoiaGVhbHRoZ3VhcmRAZXhhbXBsZS5jb20ifSwiZXhwIjoxNzM1Njg5NjAwfQ.TYZqgYQwHfpKn7eYemQb1YxX6MxYG8Z1v1x2MEjH8zY";
         if (!this.jwt) {
             console.warn("PINATA_JWT not configured. IPFS uploads will fail.");
         }

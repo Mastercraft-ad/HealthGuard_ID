@@ -19,9 +19,9 @@ class PinataService {
   private gatewayUrl = "https://gateway.pinata.cloud/ipfs/";
 
   constructor() {
-    this.apiKey = process.env.PINATA_API_KEY || "";
-    this.apiSecret = process.env.PINATA_API_SECRET || "";
-    this.jwt = process.env.PINATA_JWT || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJoZWFsdGhndWFyZCIsIm5hbWUiOiJoZWFsdGhndWFyZCIsImVtYWlsIjoiaGVhbHRoZ3VhcmRAZXhhbXBsZS5jb20ifSwiZXhwIjoxNzM1Njg5NjAwfQ.TYZqgYQwHfpKn7eYemQb1YxX6MxYG8Z1v1x2MEjH8zY";
+    this.apiKey = process.env.PINATA_API_KEY || "51c8d0ba96b549e4fa55";
+    this.apiSecret = process.env.PINATA_API_SECRET || "96547ba0ec5c738d9ef4b5f70fbf886b6594bcba54fa30ba8d1ce816d6477087";
+    this.jwt = process.env.PINATA_JWT || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiIwNWE1ZjdhMS0wNWQyLTRjOWEtOGU3OS03YThmYTI2NTVlMGEiLCJlbWFpbCI6ImZ1ZGl0ZXNncm91cEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGluX3BvbGljeSI6eyJyZWdpb25zIjpbeyJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MSwiaWQiOiJGUkExIn0seyJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MSwiaWQiOiJOWUMxIn1dLCJ2ZXJzaW9uIjoxfSwibWZhX2VuYWJsZWQiOmZhbHNlLCJzdGF0dXMiOiJBQ1RJVkUifSwiYXV0aGVudGljYXRpb25UeXBlIjoic2NvcGVkS2V5Iiwic2NvcGVkS2V5S2V5IjoiNTFjOGQwYmE5NmI1NDllNGZhNTUiLCJzY29wZWRLZXlTZWNyZXQiOiI5NjU0N2JhMGVjNWM3MzhkOWVmNGI1ZjcwZmJmODg2YjY1OTRiY2JhNTRmYTMwYmE4ZDFjZTgxNmQ2NDc3MDg3IiwiZXhwIjoxNzkzNDI5MzE4fQ.pxFE2wzbv2DMzmxJmxqUC2n2iBz4gb4077dFy2oY0ls";
 
     if (!this.jwt) {
       console.warn("PINATA_JWT not configured. IPFS uploads will fail.");
